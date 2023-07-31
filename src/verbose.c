@@ -28,7 +28,7 @@ qq_init_verbose(const char *restrict env)
     if (QQ_VERBOSE_MIN < verbose_level && verbose_level < QQ_VERBOSE_MAX)
         qq_set_verbose((QQVerbose)verbose_level);
     else
-        qq_set_verbose(QQ_INFO);
+        qq_set_verbose(QQ_DEFAULT);
 }
 
 bool

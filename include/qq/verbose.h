@@ -15,8 +15,12 @@ typedef enum {
 #define QQ_VERBOSE_MAX 5
 #define QQ_VERBOSE_MIN 0
 
+#ifndef QQ_DEFAULT
+#    define QQ_DEFAULT QQ_INFO
+#endif
+
 #ifdef QQ_VERBOSE_C
-QQVerbose qq_verbose = QQ_INFO;
+QQVerbose qq_verbose = QQ_DEFAULT;
 #else
 extern QQVerbose qq_verbose;
 #endif
