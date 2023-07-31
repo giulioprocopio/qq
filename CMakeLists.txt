@@ -2,6 +2,9 @@ cmake_minimum_required(VERSION 3.22 FATAL_ERROR)
 
 project(qq)
 
+set(CMAKE_C_STANDARD 99)
+set(CMAKE_CXX_STANDARD 14)  # GoogleTest requires at least C++14.
+
 option(BUILD_SHARED_LIBS "Build libraries as SHARED" FALSE)
 
 add_library(qq)
