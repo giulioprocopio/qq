@@ -14,7 +14,10 @@ qq_get_verbose(void)
 void
 qq_set_verbose(QQVerbose v)
 {
-    qq_verbose = v;
+    if (QQ_VERBOSE_MIN <= v && v <= QQ_VERBOSE_MAX)
+        qq_verbose = v;
+    else
+        qq_verbose = QQ_DEFAULT;
 }
 
 void
@@ -23,12 +26,7 @@ qq_init_verbose(const char *restrict env)
     qq_set_verbose(QQ_INFO);
 
     char *verbose = getenv(env);
-    int verbose_level = verbose != NULL ? atoi(verbose) : 3;
-
-    if (QQ_VERBOSE_MIN < verbose_level && verbose_level < QQ_VERBOSE_MAX)
-        qq_set_verbose((QQVerbose)verbose_level);
-    else
-        qq_set_verbose(QQ_DEFAULT);
+    qq_set_verbose(verbose != NULL ? atoi(verbose) : QQ_DEFAULT);
 }
 
 bool
