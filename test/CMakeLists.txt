@@ -9,6 +9,7 @@ foreach(case_file ${test_cases})
     add_executable(${case_name} ${case_file})
     target_link_libraries(${case_name} ${PROJECT_NAME}
                           ${LINK_LIBS} gtest_main pthread)
+    include_directories(${case_name} ${PROJECT_SOURCE_DIR}/test)
     add_test(NAME ${case_name}
              COMMAND ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/${case_name}
              WORKING_DIRECTORY
