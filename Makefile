@@ -1,4 +1,4 @@
-.PHONY: build
+.PHONY: build test
 
 build:
 	rm -rf build/
@@ -6,4 +6,4 @@ build:
 	cd build/ && cmake .. && make
 
 test:
-	@echo "No tests yet"
+	cd build/ && ./test/test_main
