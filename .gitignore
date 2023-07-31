@@ -1,7 +1,7 @@
 # Project specific ignores
 ._*
 ._*/
-build/Makefile
+build/
 
 # Created by https://www.toptal.com/developers/gitignore/api/c,cmake,c++,macos
 # Edit at https://www.toptal.com/developers/gitignore?templates=c,cmake,c++,macos
@@ -85,7 +85,7 @@ CMakeCache.txt
 CMakeFiles
 CMakeScripts
 Testing
-#Makefile
+Makefile
 cmake_install.cmake
 install_manifest.txt
 compile_commands.json
