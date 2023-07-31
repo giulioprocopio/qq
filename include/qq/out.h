@@ -8,7 +8,7 @@
 #include "qq/verbose.h"
 
 #ifndef QQ_MSG_BUFSIZ
-#    define QQ_MSG_BUFSIZ 1024
+#    define QQ_MSG_BUFSIZ (size_t)1024
 #endif
 
 void
