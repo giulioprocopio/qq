@@ -15,7 +15,6 @@ void
 qq_out(QQVerbose verbose, int code, const char *label, const char *msg,
        FILE *stream, int line, const char *func, const char *file);
 
-// Function that returns formatted string
 #define qq_outf(verbose, code, label, format, stream, ...)                 \
     ({                                                                     \
         char __qq_msg[QQ_MSG_BUFSIZ];                                      \
