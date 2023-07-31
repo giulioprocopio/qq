@@ -1,0 +1,1 @@
+# QQ verbosity C library
