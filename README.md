@@ -9,7 +9,9 @@ your C programs.
 #include <stdio.h>
 #include <qq.h>
 
-int mul(int a, int b) {
+int
+mul(int a, int b)
+{
     int ab = a * b;
     qq_debug("%d + %d = %d", a, b, ab);
 
@@ -19,7 +21,7 @@ int mul(int a, int b) {
 int
 main(int argc, char **argv)
 {
-    qq_set_level(QQ_DEBUG);
+    qq_set_verbose(QQ_DEBUG);
 
     /* Will print debug information to stdout. */
     int ab = mul(2, 3);
