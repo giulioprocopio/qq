@@ -4,6 +4,14 @@ QQ is a simple C library that provides a fast way to add verbosity levels to
 your C programs.  It is designed to work on top of any custom set of error codes
 i.e. extensions of errno codes.
 
+## Installation
+
+```bash
+git clone https://github.com/giulioprocopio/qq.git && cd qq
+make build
+make test  # Optional
+```
+
 ## Quick start
 
 Generally, you will want to set a global level of verbosity for your program
