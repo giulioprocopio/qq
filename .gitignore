@@ -1,5 +1,9 @@
-# Created by https://www.toptal.com/developers/gitignore/api/c,macos,c++
-# Edit at https://www.toptal.com/developers/gitignore?templates=c,macos,c++
+# Project specific ignores
+._*
+._*/
+
+# Created by https://www.toptal.com/developers/gitignore/api/c,cmake,c++,macos
+# Edit at https://www.toptal.com/developers/gitignore?templates=c,cmake,c++,macos
 
 ### C ###
 # Prerequisites
@@ -74,6 +78,23 @@ dkms.conf
 
 # Executables
 
+### CMake ###
+CMakeLists.txt.user
+CMakeCache.txt
+CMakeFiles
+CMakeScripts
+Testing
+Makefile
+cmake_install.cmake
+install_manifest.txt
+compile_commands.json
+CTestTestfile.cmake
+_deps
+
+### CMake Patch ###
+# External projects
+*-prefix/
+
 ### macOS ###
 # General
 .DS_Store
@@ -107,4 +128,4 @@ Temporary Items
 # iCloud generated files
 *.icloud
 
-# End of https://www.toptal.com/developers/gitignore/api/c,macos,c++
+# End of https://www.toptal.com/developers/gitignore/api/c,cmake,c++,macos
