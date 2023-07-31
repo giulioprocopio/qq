@@ -1,0 +1,19 @@
+# Approximates Python's PEP 7.
+BasedOnStyle: Google
+AlwaysBreakAfterReturnType: All
+AllowShortIfStatementsOnASingleLine: false
+AlignAfterOpenBracket: Align
+BreakBeforeBraces: Stroustrup
+ColumnLimit: 80
+DerivePointerAlignment: false
+IndentWidth: 4
+IndentPPDirectives: AfterHash
+Language: Cpp
+PointerAlignment: Right
+ReflowComments: true
+SortIncludes: false
+SpaceBeforeParens: ControlStatements
+SpacesInParentheses: false
+StatementMacros: [PyObject_HEAD, PyObject_VAR_HEAD, _PyObject_HEAD_EXTRA]
+TabWidth: 4
+UseTab: Never
