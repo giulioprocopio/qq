@@ -28,3 +28,7 @@ set(public_headers
     include/qq.h
 )
 set_target_properties(qq PROPERTIES PUBLIC_HEADER "${public_headers}")
+
+add_subdirectory(third_party/googletest)
+enable_testing()
+add_subdirectory(test)
