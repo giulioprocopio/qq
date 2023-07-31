@@ -1,4 +1,4 @@
-# QQ verbosity C library
+# QQ verbosity C library
 
 QQ is a simple C library that provides a fast way to add verbosity levels to
 your C programs.
