@@ -4,7 +4,7 @@
 #include <stdbool.h>
 
 typedef enum {
-    QQ_SILENT = 0,
+    QQ_QUIET = 0,
     QQ_ERROR = 1,
     QQ_WARNING = 2,
     QQ_INFO = 3,
