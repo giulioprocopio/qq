@@ -108,12 +108,6 @@ Returns the current verbosity level.
 
 Source function for `qq_*` macros.  It is not meant to be used directly.
 
-#### `void qq_init_verbose(const char *env)`
-
-Initializes the verbosity level from the given environment variable.  If the
-variable is not set, defaults to `QQ_DEFAULT`.  If the variable is set but its
-value is out of range, the verbosity is set to `QQ_QUIET`.
-
 #### `void qq_raise(int code, const char *fmt, ...)`
 
 This macro is used to raise an error.  It is equivalent to `qq_error` but
@@ -124,6 +118,12 @@ enough).
 
 Sets the verbosity level to the given value.  If the value is out of range, it
 is clamped to `QQ_DEFAULT`.
+
+#### `void qq_setenv_verbose(const char *env)`
+
+Initializes the verbosity level from the given environment variable.  If the
+variable is not set, defaults to `QQ_DEFAULT`.  If the variable is set but its
+value is out of range, the verbosity is set to `QQ_QUIET`.
 
 #### `void qq_*([int code,] const char *fmt, ...)`
 

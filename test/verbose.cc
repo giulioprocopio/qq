@@ -32,22 +32,22 @@ TEST(SetVerbose, Invalid)
 
 char const *_qq_test_verbose = "_QQ_TEST_VERBOSE";
 
-TEST(InitVerbose, Missing)
+TEST(SetenvVerbose, Missing)
 {
     unsetenv(_qq_test_verbose);
-    qq_init_verbose(_qq_test_verbose);
+    qq_setenv_verbose(_qq_test_verbose);
     EXPECT_EQ(QQ_DEFAULT, qq_get_verbose())
         << "Verbose level not set to default " << QQ_DEFAULT
         << " when environment variable is missing";
 }
 
-TEST(InitVerbose, Valid)
+TEST(SetenvVerbose, Valid)
 {
     for (int v = QQ_VERBOSE_MIN; v <= QQ_VERBOSE_MAX; v++) {
         char buf[16];
         snprintf(buf, sizeof(buf), "%d", v);
         setenv(_qq_test_verbose, buf, 1);
-        qq_init_verbose(_qq_test_verbose);
+        qq_setenv_verbose(_qq_test_verbose);
         EXPECT_EQ(v, qq_get_verbose())
             << "Verbose level not set to " << v << " when environment is " << v;
     }

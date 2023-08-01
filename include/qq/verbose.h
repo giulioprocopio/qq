@@ -32,7 +32,7 @@ void
 qq_set_verbose(QQVerbose v);
 
 void
-qq_init_verbose(const char *env);
+qq_setenv_verbose(const char *env);
 
 bool
 qq_is_verbose(QQVerbose v);

@@ -21,7 +21,7 @@ qq_set_verbose(QQVerbose v)
 }
 
 void
-qq_init_verbose(const char *restrict env)
+qq_setenv_verbose(const char *restrict env)
 {
     qq_set_verbose(QQ_INFO);
 
