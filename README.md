@@ -7,7 +7,7 @@ i.e. extensions of errno codes.
 ## Installation
 
 ```bash
-git clone https://github.com/giulioprocopio/qq.git && cd qq
+git clone --recursive https://github.com/giulioprocopio/qq.git && cd qq
 make build
 make test  # Optional
 ```
