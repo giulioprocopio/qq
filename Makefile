@@ -6,6 +6,6 @@ build:
 	cd build/ && cmake .. && make
 
 test:
-	cd build/ && ./test/test_main
+	cd build/ && ctest
 
 all: build test
