@@ -1,9 +1,8 @@
 .PHONY: build test
 
 build:
-	rm -rf build/
-	mkdir build/
-	cd build/ && cmake .. && make
+	cmake -B build/ -DCMAKE_BUILD_TYPE=Debug
+	cmake --build build/ --config Debug
 
 test:
 	cd build/ && ctest
