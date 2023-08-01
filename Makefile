@@ -7,3 +7,5 @@ build:
 
 test:
 	cd build/ && ./test/test_main
+
+all: build test
