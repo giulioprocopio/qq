@@ -4,7 +4,7 @@ QQ is a simple C library that provides a fast way to add verbosity levels to
 your C programs.  It is designed to work on top of any custom set of error codes
 i.e. extensions of errno codes.
 
-## Installation
+## Build and test
 
 ```bash
 git clone --recursive https://github.com/giulioprocopio/qq.git && cd qq
@@ -17,6 +17,26 @@ Or, cloning submodules manually:
 ```bash
 git clone https://github.com/giulioprocopio/qq.git && cd qq
 make submodules build
+```
+
+You have now generated the static library `libqq.*` and the header `qq.h` in
+the `build` directory.
+
+To include the library in your project, it is suggested to add it as a Git
+submodule and link it statically via CMake.  In the source directory of your
+project, add the submodule:
+
+```bash
+mkdir third_party && cd third_party
+git submodule add https://github.com/giulioprocopio/qq.git
+git submodule update --init --recursive
+```
+
+Then, in your `CMakeLists.txt`:
+
+```cmake
+add_subdirectory(third_party/qq)
+target_link_libraries(<your_target> qq)
 ```
 
 ## Quick start

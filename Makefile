@@ -1,4 +1,4 @@
-.PHONY: build test
+.PHONY: submodules build test
 
 submodules:
 	git submodule update --init --recursive
