@@ -12,6 +12,13 @@ make build
 make test  # Optional
 ```
 
+Or, cloning submodules manually:
+
+```bash
+git clone https://github.com/giulioprocopio/qq.git && cd qq
+make submodules build
+```
+
 ## Quick start
 
 Generally, you will want to set a global level of verbosity for your program

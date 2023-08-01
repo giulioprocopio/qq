@@ -1,5 +1,8 @@
 .PHONY: build test
 
+submodules:
+	git submodule update --init --recursive
+
 build:
 	cmake -B build/ -DCMAKE_BUILD_TYPE=Debug
 	cmake --build build/ --config Debug
@@ -7,4 +10,4 @@ build:
 test:
 	cd build/ && ctest
 
-all: build test
+all: submodules build test
